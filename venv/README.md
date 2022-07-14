@@ -6,6 +6,14 @@ This repository contains test cases for YouTube
 1. Python and Pycharm 
 2. Android sudio SDK and emulator
 3. Appium binaries, Desktop client and Android emulator and Real device configuration
+4. Install JDK (Java Development Kit) 
+5. Install Eclipse
+6. Install TestNg for Eclipse
+7. Install Selenium Server JAR 
+8. Appium Client Library
+9. APK App Info
+
+
 
 ## Usage
 ###### For halp
