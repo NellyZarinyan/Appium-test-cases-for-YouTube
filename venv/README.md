@@ -16,7 +16,7 @@ This repository contains test cases for YouTube
 
 
 ## Usage
-###### For halp
+###### For help
 ```bash
 python .\venv\run.py --help
 ```
