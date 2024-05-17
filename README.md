@@ -9,3 +9,8 @@ To configure TestRail reporting, set the following environment variables command
 6. `TR_NAME`: Prefix for the run name: `<TR_NAME> - <CurrentDate> - <workerName> - Automation - <Customer>`.
 7. `VERSION`: Suffix for the run name: `<CurrentDate> - <workerName> - Automation - <Customer> - <VERSION>`.
 8. `NEW_RUN`: Set `true` to create a new run, by default `false`
+
+
+#### Required Environment Variable: `NODE_ENV` <font color="red">&#42;</font>
+
+Make sure to set the `NODE_ENV` environment variable to specify the environment configuration.
