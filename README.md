@@ -1,7 +1,7 @@
 #### Environment Variables
 To configure TestRail reporting, set the following environment variables command line or in `testRail.config.ts` file:
 
-1. `REPORTER`: In order to run in TestRail set "testRail" $\color{red}{*}$
+1. `REPORTER`: In order to run in TestRail set "testRail" $\color{red}{*}$.
 2. `TR_USER`: User email for TestRail, can also be updated in a `testRail.config.ts` file.
 3. `TR_PASS`: User password for TestRail, can also be updated in a `testRail.config.ts` file.
 4. `TR_SUITE_ID`: Suite ID, by default `34`.
