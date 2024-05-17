@@ -98,7 +98,7 @@ or run any spec file in the folder for different flow like
 If you want to use the TestRail reporter, you first need to have a TestRail account.
 
 #### Environment Variables
-To configure TestRail reporting, set the following environment variables via the command line or update in `testRail.config.ts` file:
+To configure TestRail reporting, set the following environment variables via the command line or update in [`testRail.config.ts`](#Configuring TestRail reporting) file:
 
 1. `REPORTER`: In order to run in TestRail set "testRail". $\color{red}{*}$
 2. `TR_USER`: User email for TestRail, can also be updated in a `testRail.config.ts` file. $\color{red}{*}$
