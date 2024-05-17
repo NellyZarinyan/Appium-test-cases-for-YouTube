@@ -130,7 +130,10 @@ REPORTER=testRail NODE_ENV=frosh RUN_ID=<runId> TR_USER=<username> TR_PASS=<pass
  ``` bash
 REPORTER=testRail NODE_ENV=frosh NEW_RUN=true TR_USER=<username> TR_PASS=<password>  npx playwright test <path> 
 ```
-
+or 
+ ``` bash
+REPORTER=testRail NODE_ENV=frosh TR_NAME=<prefix> TR_USER=<username> TR_PASS=<password>  npx playwright test <path> 
+```
 #### TestRail reporting via GHA
 
 You can create and reuse TestRail runs using GitHub Actions (GHA). Follow these steps to report in TestRail via GitHub Actions workflow:
