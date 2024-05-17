@@ -11,6 +11,6 @@ To configure TestRail reporting, set the following environment variables command
 8. `NEW_RUN`: Set `true` to create a new run, by default `false`
 
 
-#### Required Environment Variable: `NODE_ENV` <font color="red">&#42;</font>
+#### Required Environment Variable: `NODE_ENV` <span style="color:red">＊</span>
 
 Make sure to set the `NODE_ENV` environment variable to specify the environment configuration.
