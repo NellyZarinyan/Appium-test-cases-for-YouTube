@@ -118,21 +118,21 @@ To configure TestRail reporting, set the following environment variables via the
 
 > To create or reuse a run in TestRail, use the following command (this command reuses an existing TestRail run if it already exists, otherwise, it creates a new TestRail run.):
 ``` bash
-REPORTER=testRail NODE_ENV=frosh TR_USER=<username> TR_PASS=<password>  npx playwright test <path> 
+REPORTER=testRail TR_USER=<username> TR_PASS=<password> NODE_ENV=frosh npx playwright test <path> 
 ```
 
 > To reuse a specific run
  ``` bash
-REPORTER=testRail NODE_ENV=frosh RUN_ID=<runId> TR_USER=<username> TR_PASS=<password> npx playwright test <path> 
+REPORTER=testRail RUN_ID=<runId> TR_USER=<username> TR_PASS=<password> NODE_ENV=frosh npx playwright test <path> 
 ```
 
 > To create a new run
  ``` bash
-REPORTER=testRail NODE_ENV=frosh NEW_RUN=true TR_USER=<username> TR_PASS=<password>  npx playwright test <path> 
+REPORTER=testRail NEW_RUN=true TR_USER=<username> TR_PASS=<password> NODE_ENV=frosh npx playwright test <path> 
 ```
 or 
  ``` bash
-REPORTER=testRail NODE_ENV=frosh TR_NAME=<prefix> TR_USER=<username> TR_PASS=<password>  npx playwright test <path> 
+REPORTER=testRail TR_NAME=<prefix> TR_USER=<username> TR_PASS=<password> NODE_ENV=frosh npx playwright test <path> 
 ```
 #### TestRail reporting via GHA
 
