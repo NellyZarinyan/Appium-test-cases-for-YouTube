@@ -1,0 +1,30 @@
+name: '[All] Refresh Jwt'
+on:
+  workflow_dispatch:      
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        test_suite: ["dex", "ch"]
+    runs-on: [self-hosted, sansa, arc, pegasus, size-xl]
+    env:
+      ACTIONS_STEP_DEBUG: true
+      DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
+      DD_SERVICE: 'refreshJwt'
+      LOCAL: 'false'
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Setup
+        uses: DexCare/testing-tool-cli/.github/actions/setup@main
+        with:
+          PACKAGE_WRITER_TOKEN: ${{ secrets.GHCR_PACKAGE_MANAGEMENT }}   
+      - name: Install Playwright
+        run: |
+          npx playwright install --with-deps chromium
+          echo "Playwright version: $(npx playwright --version)"
+      - name: Refresh JWTs
+        run: |
+          orion refreshJwt -C ${{ matrix.test_suite }}
