@@ -26,7 +26,6 @@ To debug locally, run a subset of tests and edit ```playwright.config.ts``` and 
 If you wish to run headed vs headless, change playwright.config.ts ```headless: true/false```. Be sure to change it to true before committing for CI/CD purposes.
 You can also use the ```--headed``` arg through the CLI.
 
-
 ## Creating tests and Synching to TestRail
 1. Test your workflow manually, be mindful of the test data you use, can this be reproduced over and over by an automated test? Is the test user you're using used in many other tests? What can cause this test to be flaky?
 2. Create the test in TestRail https://dexcare.testrail.io/index.php?/suites/overview/22. 
@@ -95,7 +94,7 @@ or run any spec file in the folder for different flow like
 
 ## TestRail Reporting
 
-If you want to use the TestRail reporter, you first need to have a TestRail account.
+If you want to use the TestRail reporter, first you need to have a TestRail account.
 
 #### Environment Variables
 To configure TestRail reporting, set the following environment variables via the command line or update in [testRail.config.ts](#configuring-testRail-reporting) file:
@@ -110,13 +109,12 @@ To configure TestRail reporting, set the following environment variables via the
 8. `NEW_RUN`: To create a new run, by default `false`
 
 ####  Configuring TestRail reporting
-   1. `testRail.config.ts` file located in `playwright-ui-tests/src/utils/`: TestRail configuration details such as the host  URL, username, password, projectId, customer, runId, suiteId, testRunName, reporter, version, createNewRun.
-        
-   2. `testrail_reporter.ts ` file located in `playwright-ui-tests/src/utils/`:  Implementation for integrating TestRail reporting into a testing framework.
+   1. `testRail.config.ts` file located in `playwright-ui-tests/src/utils/`: TestRail configuration details such as the host URL, username, password, projectId, customer, runId, suiteId, testRunName, reporter, version, createNewRun.
 
 #### TestRail Execution Commands
 
-> To create or reuse a run in TestRail, use the following command (this command reuses an existing TestRail run if it already exists, otherwise, it creates a new TestRail run.):
+If you have already changed the environment variables in the config file, there is no need to pass them from the command line.
+> To create or reuse a run in TestRail, use the following command (this command reuse an existing TestRail run if a run with a matching name is found, otherwise, it creates a new TestRail run.):
 ``` bash
 REPORTER=testRail TR_USER=<username> TR_PASS=<password> NODE_ENV=frosh npx playwright test <path> 
 ```
