@@ -95,16 +95,16 @@ or run any spec file in the folder for different flow like
 
 ## TestRail Reporting
 
-If you want to use TestRail reporter at first you need to have a TestRail account:
+If you want to use the TestRail reporter, you first need to have a TestRail account.
 
 #### Environment Variables
-To configure TestRail reporting, set the following environment variables command line or in `testRail.config.ts` file:
+To configure TestRail reporting, set the following environment variables via the command line or update in `testRail.config.ts` file:
 
 1. `REPORTER`: In order to run in TestRail set "testRail". $\color{red}{*}$
 2. `TR_USER`: User email for TestRail, can also be updated in a `testRail.config.ts` file. $\color{red}{*}$
 3. `TR_PASS`: User password for TestRail, can also be updated in a `testRail.config.ts` file. $\color{red}{*}$
 4. `TR_SUITE_ID`: Suite ID, by default [34](https://dexcare.testrail.io/index.php?/suites/view/34).
-5. `RUN_ID`: Run ID to reuse specifc run.
+5. `RUN_ID`: Run ID to reuse a specific run.
 6. `TR_NAME`: Prefix for the run name: `<TR_NAME> - <CurrentDate> - <browser> - Automation - <Customer>`.
 7. `VERSION`: Suffix for the run name: `<CurrentDate> - <browser> - Automation - <Customer> - <VERSION>`.
 8. `NEW_RUN`: To create a new run, by default `false`
@@ -114,7 +114,7 @@ To configure TestRail reporting, set the following environment variables command
         
    2. `testrail_reporter.ts ` file located in `playwright-ui-tests/src/utils/`:  Implementation for integrating TestRail reporting into a testing framework.
 
-#### Creating or Updating Runs in TestRail
+#### TestRail Execution Commands
 
 > To create or reuse a run in TestRail, use the following command (this command reuses an existing TestRail run if it already exists, otherwise, it creates a new TestRail run.):
 ``` bash
@@ -133,19 +133,17 @@ REPORTER=testRail NODE_ENV=frosh NEW_RUN=true TR_USER=<username> TR_PASS=<passwo
 
 #### TestRail reporting via GHA
 
-You can create and update TestRail runs using GitHub Actions (GHA). Follow these steps to report in TestRail via GitHub Actions workflow:
+You can create and reuse TestRail runs using GitHub Actions (GHA). Follow these steps to report in TestRail via GitHub Actions workflow:
 
 1. **Navigate to Repository**: Open the `playwright-ui-tests` repository on GitHub.
 
 2. **Access Actions Tab**: Navigate to the "Actions" tab.
 
-3. **Select Workflow**: Choose the proper workflow (ex. `daily e2e frosh test cases`).
+3. **Select Workflow**: Choose the proper workflow (e.g.,`daily e2e frosh test cases`).
 
-4. **Create/update Run**:
+4. **Create/reuse Run**:
    - Click on the Run workflow button
    - By default, this will run on the main branch. If you want to change it, select the branch for which you want to create or update the TestRail run.
-   - To create a new TestRail run you can provider a run name prefix by default if will `Daily E2E UI Booking`.
-   - To reuse already created run in TestRail uncheck the 'Create a new TR run?' option.
+   - To create a new TestRail run you can provide a run name prefix, by default it will be `Daily E2E UI Booking`.
+   - To reuse an already created run in TestRail uncheck the 'Create a new TR run?' option.
    - Click on the "Run workflow" button.
-
-
