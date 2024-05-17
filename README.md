@@ -10,4 +10,4 @@ To configure TestRail reporting, set the following environment variables command
 7. `VERSION`: Suffix for the run name: `<CurrentDate> - <workerName> - Automation - <Customer> - <VERSION>`.
 8. `NEW_RUN`: Set `true` to create a new run, by default `false`
 
-<p style='color:red'>This is some red text.</p>
+$\color{green}{test}$
